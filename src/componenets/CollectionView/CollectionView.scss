@@ -1,0 +1,10 @@
+.preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 3rem;
+}
+.title {
+  margin-bottom: 25px;
+  font-size: 3rem;
+}

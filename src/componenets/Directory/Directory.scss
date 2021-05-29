@@ -1,0 +1,7 @@
+.directory-menu {
+  display: grid;
+  grid-template-columns: minmax(30px, 50%) minmax(30px, 50%) minmax(30px, 50%);
+  grid-gap: 5px;
+  grid-template-rows: 30vh 60vh;
+  
+}
