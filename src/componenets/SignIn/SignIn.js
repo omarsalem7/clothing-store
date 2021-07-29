@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import FormInput from "../FormInput/FormInput";
 import "./SignIn.scss";
 import CustomButton from "../CustomButton/CustomButton";
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
 const SignIn = () => {
   const handleChange = (e) => {
     setSign({ ...sign, [e.target.name]: e.target.value });
@@ -40,6 +42,13 @@ const SignIn = () => {
 
         <CustomButton type="submit" value="Submit Form" onChange={handleSubmit}>
           Sign In
+        </CustomButton>
+        <CustomButton
+          style={{ background: "#4285F4" }}
+          value="Submit Form"
+          onClick={signInWithGoogle}
+        >
+          Sign With Google
         </CustomButton>
       </form>
     </div>
