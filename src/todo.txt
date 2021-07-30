@@ -1,1 +1,1 @@
-1- add loading indictor when click submit button in sign up form
+1- add loading indictor when click submit button in sign up form..
