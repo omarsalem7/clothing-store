@@ -2,16 +2,24 @@ import React, { useState } from "react";
 import FormInput from "../FormInput/FormInput";
 import "./SignIn.scss";
 import CustomButton from "../CustomButton/CustomButton";
+import { signInWithGoogle, auth } from "../../firebase/firebase.utils";
+
 const SignIn = () => {
   const handleChange = (e) => {
     setSign({ ...sign, [e.target.name]: e.target.value });
     console.log(sign.email + " , " + sign.password);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSign({ email: "", password: "" });
-    console.log(sign.email + " , " + sign.password);
+    const { email, password } = sign;
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      setSign({ email: "", password: "" });
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   const [sign, setSign] = useState({
     email: "",
     password: "",
@@ -23,7 +31,7 @@ const SignIn = () => {
       <span className="font2">Sign in with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
-          label="email"
+          label="Email"
           name="email"
           type="email"
           value={sign.email}
@@ -31,15 +39,22 @@ const SignIn = () => {
         />
 
         <FormInput
-          label="password"
+          label="Password"
           name="password"
           type="password"
           value={sign.password}
           handleChange={handleChange}
         />
 
-        <CustomButton type="submit" value="Submit Form" onChange={handleSubmit}>
+        <CustomButton type="submit" value="Submit Form">
           Sign In
+        </CustomButton>
+        <CustomButton
+          style={{ background: "#4285F4" }}
+          value="Submit Form"
+          onClick={signInWithGoogle}
+        >
+          Sign With Google
         </CustomButton>
       </form>
     </div>
