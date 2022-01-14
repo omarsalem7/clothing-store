@@ -1,21 +1,30 @@
 .header {
-  margin-bottom: 5rem;
-  margin-top: 1.5rem;
-  .options {
-    float: right;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    .option {
-      margin: 0 2rem;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
   }
   a {
     text-decoration: none;
     color: black;
   }
-  .logo-container {
-    margin-left: 1.8rem;
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+
+    .option {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
   }
 }

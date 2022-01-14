@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,gBADc,CACd,MAAM,CAAC;EACL,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;EAC3B,aAAa,EAAE,GAAG;CACnB;;AAPH,AAQE,gBARc,CAQd,KAAK,CAAC;EACJ,SAAS,EAAE,MAAM;CAClB;;AAVH,AAWE,gBAXc,CAWd,MAAM,CAAC;EACL,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,MAAM;EACjB,aAAa,EAAE,MAAM;CACtB",
+    "sources": [
+        "CollectionItem.scss"
+    ],
+    "names": [],
+    "file": "CollectionItem.css"
+}
