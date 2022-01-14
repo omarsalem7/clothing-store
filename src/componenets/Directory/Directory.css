@@ -1,0 +1,10 @@
+.directory-menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(30px, 50%) minmax(30px, 50%) minmax(30px, 50%);
+      grid-template-columns: minmax(30px, 50%) minmax(30px, 50%) minmax(30px, 50%);
+  grid-gap: 5px;
+  -ms-grid-rows: 30vh 60vh;
+      grid-template-rows: 30vh 60vh;
+}
+/*# sourceMappingURL=Directory.css.map */

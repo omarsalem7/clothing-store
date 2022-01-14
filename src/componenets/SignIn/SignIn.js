@@ -36,6 +36,7 @@ const SignIn = () => {
           type="email"
           value={sign.email}
           handleChange={handleChange}
+          required
         />
 
         <FormInput
@@ -44,12 +45,14 @@ const SignIn = () => {
           type="password"
           value={sign.password}
           handleChange={handleChange}
+          required
         />
 
         <CustomButton type="submit" value="Submit Form">
           Sign In
         </CustomButton>
         <CustomButton
+          type="button"
           style={{ background: "#4285F4" }}
           value="Submit Form"
           onClick={signInWithGoogle}
